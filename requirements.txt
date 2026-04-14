@@ -1,6 +1,7 @@
 streamlit==1.28.0
-# TensorFlow - only loaded when training models (lazy import in utils.py)
-tensorflow>=2.15
+# TensorFlow - cannot install on Python 3.14 yet. 
+# Only needed for local training (python training/train.py)
+# Not required for the Streamlit app which loads pre-trained models
 numpy>=1.24.0
 Pillow>=10.0.0
 scikit-learn>=1.3.0
