@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.idea/
+.vscode/
+.DS_Store
+*.h5
+saved_models/
+data/
+node_modules/
+__MACOSX/
+*.log

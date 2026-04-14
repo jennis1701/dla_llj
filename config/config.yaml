@@ -1,0 +1,11 @@
+dataset:
+  train_dir: dataset/train
+  test_dir: dataset/test
+  image_size: 224
+  batch_size: 32
+  validation_split: 0.2
+  seed: 42
+
+training:
+  epochs: 35
+  save_dir: saved_models
