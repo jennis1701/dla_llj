@@ -1,6 +1,5 @@
 import os
 import yaml
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 
 def load_config(config_path: str = "config/config.yaml") -> dict:
@@ -9,6 +8,9 @@ def load_config(config_path: str = "config/config.yaml") -> dict:
 
 
 def create_image_generators(config: dict):
+    # Import TensorFlow only when needed (lazy import for cloud compatibility)
+    from tensorflow.keras.preprocessing.image import ImageDataGenerator
+    
     image_size = config["dataset"]["image_size"]
     batch_size = config["dataset"]["batch_size"]
     validation_split = config["dataset"]["validation_split"]

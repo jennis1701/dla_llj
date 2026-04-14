@@ -2,7 +2,6 @@ import streamlit as st
 import os
 from pathlib import Path
 import sys
-import tensorflow as tf
 
 # Add parent directory to path for imports
 project_root = Path(__file__).resolve().parents[2]
@@ -28,6 +27,9 @@ else:
 
     if uploaded_image is not None and st.button("Predict Activity"):
         try:
+            # Import TensorFlow only when needed (lazy import for cloud compatibility)
+            import tensorflow as tf
+            
             model = tf.keras.models.load_model(model_path)
             preprocessed = preprocess_image(uploaded_image, target_size=(config["dataset"]["image_size"], config["dataset"]["image_size"]))
             class_names = create_image_generators(config)[3]
