@@ -1,7 +1,6 @@
-streamlit==1.28.0
-# Note: numpy and Pillow are optional - provided by Streamlit dependencies
-# Remove if causes build issues on deployment
+streamlit>=1.32.0
 scikit-learn>=1.3.0
 matplotlib>=3.8.0
 seaborn>=0.12.0
 pyyaml>=6.0
+tensorflow-cpu==2.13.0
